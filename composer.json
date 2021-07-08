@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RPAPP\\": "packages/unique_identifier/src"
+            "RPAPP\\": "src"
         }
     }
 }
