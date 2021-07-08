@@ -1,0 +1,21 @@
+{
+    "name": "rpapp/rpapp-pkg",
+    "description": "RP APP Package.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Raphael Pfefferle",
+            "email": "rdcp15@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^8.40"
+    },
+    "autoload": {
+        "psr-4": {
+            "RPAPP\\": "packages/unique_identifier/src"
+        }
+    }
+}
