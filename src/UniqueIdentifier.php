@@ -11,11 +11,10 @@ class UniqueIdentifier
     const OPENSSL_RANDOM_PSEUDO_BYTES = 'OPENSSL_RANDOM_PSEUDO_BYTES';
 
     /**
-     * @param string $type
+     * @param string $type RANDOM_BYTES, RANDOM_STRING, OPENSSL_RANDOM_PSEUDO_BYTES
      * @param int $length
      * @param bool|null $strong_result
      * @return string
-     * @throws \Exception
      */
     public function generate(string $type, int $length, bool $strong_result = null): string
     {
