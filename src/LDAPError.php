@@ -4,7 +4,7 @@ namespace RPAPP;
 
 use Messages;
 
-class LDAPErrorCode
+class LDAPError
 {
 
 }
