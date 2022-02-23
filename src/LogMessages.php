@@ -17,9 +17,9 @@ class LogMessages
 	const ACCOUNT_EXPIRED = 'ACCOUNT_EXPIRED';
 	const USER_MUST_RESET_PASSWORD = 'USER_MUST_RESET_PASSWORD';
 	const USER_ACCOUNT_LOCKED = 'USER_ACCOUNT_LOCKED';
-	const UNKNOWN = 'UNKNONW';
+	const UNKNOWN = 'UNKNOWN';
 
-	public funcion __construct() {}
+	public function __construct() {}
 
 	public function getCode(Messages $message): int
 	{
