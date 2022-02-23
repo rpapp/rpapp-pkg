@@ -8,7 +8,7 @@ class Messages
 	const USER_NOT_FOUND = 'User not found.';
 	const INVALID_CREDENTIALS = 'Invalid credentials.';
 	const USER_NOT_PERMITTED_AT_THIS_TIME = 'User not permitted at this time.';
-	const USER_NOT_PERMITTED_TO_LOGIN = 'User not permitted to login.';
+	const USER_NOT_PERMITTED_TO_LOGIN_AT_THIS_WORKSTATION = 'User not permitted to login at this workstation.';
 	const PASSWORD_EXPIRED = 'Password expired.';
 	const ACCOUNT_DISABLED = 'Account disabled.';
 	const ACCOUNT_EXPIRED = 'Account expired.';
