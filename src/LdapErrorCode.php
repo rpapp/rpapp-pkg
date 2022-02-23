@@ -64,5 +64,7 @@ class LDAPErrorCode
 				break;
 			}
 		}
+
+		return $message;
 	}
 }
