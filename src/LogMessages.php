@@ -18,6 +18,7 @@ class LogMessages
 	const USER_MUST_RESET_PASSWORD = 'USER_MUST_RESET_PASSWORD';
 	const USER_ACCOUNT_LOCKED = 'USER_ACCOUNT_LOCKED';
 	const UNKNOWN = 'UNKNOWN';
+	const FAILED_LOGIN = 'USERNAME_AND_OR_PASSWORD_INCORRECT';
 
 	public function __construct() {}
 }
