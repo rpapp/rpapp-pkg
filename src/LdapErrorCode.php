@@ -2,7 +2,7 @@
 
 namespace RPAPP;
 
-use RPAPP\Messages;
+use Messages;
 
 class LDAPErrorCode
 {
