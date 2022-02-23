@@ -6,6 +6,5 @@ use RPAPP\Messages;
 
 class LDAPErrorCode
 {
-	public function __construct() {}
-	
+
 }
