@@ -8,7 +8,7 @@ use RPAPP\LogMessages;
 class LDAPError
 {
 	public function __construct() {}
-	public function getError(string $errorCode): array
+	public function getError(string $errorCode = NULL): array
 	{
 		$message = array();
 
