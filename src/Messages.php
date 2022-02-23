@@ -17,4 +17,6 @@ class Messages
 	const UNKNOWN = 'Unknown';
 	const FAILED_LOGIN = 'Username and or password is incorrect';
 	const PASSWORD_FAILED = 'The provided password is incorrect';
+
+	public function __construct;
 }

@@ -20,41 +20,4 @@ class LogMessages
 	const UNKNOWN = 'UNKNOWN';
 
 	public function __construct() {}
-
-	public function getCode(Messages $message): int
-	{
-		$code = '';
-
-		switch($message) {
-			Messages::USER_NOT_FOUND {
-				$code = '525';				
-			}
-			Messages::INVALID_CREDENTIALS {
-				$code = '52e';
-			}
-			Messages::USER_NOT_PERMITTED_AT_THIS_TIME {
-				$code = '530';
-			}
-			Messages::USER_NOT_PERMITTED_TO_LOGIN_AT_THIS_WORKSTATION {
-				$code = '531';
-			}
-			Messages::ACCOUNT_EXPIRED {
-				$code = '532';
-			}
-			Messages::ACCOUNT_DISABLED {
-				$code = '533';
-			}
-			Messages::USER_MUST_RESET_PASSWORD {
-				$code = '773';
-			}
-			Messages::USER_ACCOUNT_LOCKED {
-				$code = '775';
-			}
-			default {
-				$code = '0';
-			}
-		}
-
-		return $code;
-	}
 }
