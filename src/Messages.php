@@ -2,59 +2,19 @@
 
 namespace RPAPP;
 
-class Messages
+class Messages 
 {
-	//
-	// For authentication;
-	//
-	const SUCCESSFULLY_LOGIN = 'SUCCESSFULLY_LOGIN';
-	const USER_NOT_FOUND = 'USER_NOT_FOUND';
-	const INVALID_CREDENTIALS = 'INVALID_CREDENTIALS';
-	const USER_NOT_PERMITTED_AT_THIS_TIME = 'USER_NOT_PERMITTED_AT_THIS_TIME';
-	const USER_NOT_PERMITTED_TO_LOGIN = 'USER_NOT_PERMITTED_TO_LOGIN';
-	const PASSWORD_EXPIRED = 'PASSWORD_EXPIRED';
-	const ACCOUNT_DISABLED = 'ACCOUNT_DISABLED';
-	const ACCOUNT_EXPIRED = 'ACCOUNT_EXPIRED';
-	const USER_MUST_RESET_PASSWORD = 'USER_MUST_RESET_PASSWORD';
-	const USER_ACCOUNT_LOCKED = 'USER_ACCOUNT_LOCKED';
-	const UNKNOWN = 'UNKNONW';
-
-	public funcion __construct() {}
-
-	public function getCode(Messages $message): int
-	{
-		$code = '';
-
-		switch($message) {
-			Messages::USER_NOT_FOUND {
-				$code = '525';				
-			}
-			Messages::INVALID_CREDENTIALS {
-				$code = '52e';
-			}
-			Messages::USER_NOT_PERMITTED_AT_THIS_TIME {
-				$code = '530';
-			}
-			Messages::USER_NOT_PERMITTED_TO_LOGIN {
-				$code = '531';
-			}
-			Messages::ACCOUNT_EXPIRED {
-				$code = '532';
-			}
-			Messages::ACCOUNT_DISABLED {
-				$code = '533';
-			}
-			Messages::USER_MUST_RESET_PASSWORD {
-				$code = '773';
-			}
-			Messages::USER_ACCOUNT_LOCKED {
-				$code = '775';
-			}
-			default {
-				$code = '0';
-			}
-		}
-
-		return $code;
-	}
+	const SUCCESSFULLY_LOGIN = 'You have successfully login.';
+	const USER_NOT_FOUND = 'User not found.';
+	const INVALID_CREDENTIALS = 'Invalid credentials.';
+	const USER_NOT_PERMITTED_AT_THIS_TIME = 'User not permitted at this time.';
+	const USER_NOT_PERMITTED_TO_LOGIN = 'User not permitted to login.';
+	const PASSWORD_EXPIRED = 'Password expired.';
+	const ACCOUNT_DISABLED = 'Account disabled.';
+	const ACCOUNT_EXPIRED = 'Account expired.';
+	const USER_MUST_RESET_PASSWORD = 'User must reset password.';
+	const USER_ACCOUNT_LOCKED = 'User account locked.';
+	const UNKNOWN = 'Unknown';
+	const FAILED_LOGIN = 'Your user and or password is incorrect.';
+	const PASSWORD_FAILED = 'The provided password is incorrect.';
 }
