@@ -61,7 +61,7 @@ class LDAPError
 			}
 			default:
 			{
-				$message = array('code' => '0', 'message' => Messages::Unknown, 'log_message' => LogMessages::UNKNOWN);
+				$message = array('code' => '0', 'message' => Messages::UNKNOWN, 'log_message' => LogMessages::UNKNOWN);
 				break;
 			}
 		}
