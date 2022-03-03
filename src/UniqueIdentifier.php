@@ -10,6 +10,7 @@ class UniqueIdentifier
     const RANDOM_STRING = 'RANDOM_STRING';
     const OPENSSL_RANDOM_PSEUDO_BYTES = 'OPENSSL_RANDOM_PSEUDO_BYTES';
 
+    public function __construct() {}
     /**
      * @param string $type RANDOM_BYTES, RANDOM_STRING, OPENSSL_RANDOM_PSEUDO_BYTES
      * @param int $length
