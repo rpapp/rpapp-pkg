@@ -5,7 +5,7 @@ namespace RPAPP\Client;
 /**
  *
  */
-class SystemInformation
+class ClientSystemInformation
 {
     /**
      * Class constructor.
