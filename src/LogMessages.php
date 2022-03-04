@@ -20,6 +20,7 @@ class LogMessages
 	const UNKNOWN = 'UNKNOWN';
 	const FAILED_LOGIN = 'USERNAME_AND_OR_PASSWORD_INCORRECT';
     const UNKNOWN_USER = 'UNKNOWN_USER';
+    const NOT_CONNECTED_TO_VPN = 'NOT_CONNECTED_TO_VPN';
 
 	public function __construct() {}
 }

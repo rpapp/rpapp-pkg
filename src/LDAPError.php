@@ -31,7 +31,7 @@ class LDAPError
 			}
 			case('531'):
 			{
-				$message = array('code' => '531', 'message' => Messages::USER_NOT_PERMITTED_AT_THIS_WORKSTATION, 'log_message' => LogMessages::USER_NOT_PERMITTED_TO_LOGIN_AT_THIS_WORKSTATION);
+				$message = array('code' => '531', 'message' => Messages::USER_NOT_PERMITTED_TO_LOGIN_AT_THIS_WORKSTATION, 'log_message' => LogMessages::USER_NOT_PERMITTED_TO_LOGIN_AT_THIS_WORKSTATION);
 				break;
 			}
 			case('532'):
@@ -51,7 +51,7 @@ class LDAPError
 			}
 			case('773'):
 			{
-				$message = array('code' => '773', 'message' => Messages::USER_MIST_RESET_PSSWORD, 'log_message' => LogMessages::USER_MUST_RESET_PASSWORD);
+				$message = array('code' => '773', 'message' => Messages::USER_MUST_RESET_PASSWORD, 'log_message' => LogMessages::USER_MUST_RESET_PASSWORD);
 				break;
 			}
 			case('775'):
@@ -61,7 +61,7 @@ class LDAPError
 			}
 			default:
 			{
-				$message = array('code' => '0', 'message' => Messages::UNKNOWN, 'log_message' => LogMessages::UNKNOWN);
+				$message = array('code' => $errorCode, 'message' => Messages::UNKNOWN, 'log_message' => LogMessages::UNKNOWN);
 				break;
 			}
 		}
