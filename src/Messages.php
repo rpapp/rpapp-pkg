@@ -17,7 +17,7 @@ class Messages
 	const UNKNOWN = 'Unknown';
 	const FAILED_LOGIN = 'Username and or password is incorrect';
 	const PASSWORD_FAILED = 'The provided password is incorrect';
-    const POSSIBLE_NOT_CONNECTED_TO_VPN = ' Possible not connected to VPN';
+    const CALL_SERVICE_DESK = 'Please call Service Desk Team';
 
 	public function __construct() {}
 }
