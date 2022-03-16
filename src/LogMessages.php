@@ -21,6 +21,7 @@ class LogMessages
 	const FAILED_LOGIN = 'USERNAME_AND_OR_PASSWORD_INCORRECT';
     const UNKNOWN_USER = 'UNKNOWN_USER';
     const CALL_SERVICE_DESK = 'CALL_SERVICE_DESK';
+	const SYSTEM_GENERATED = 'SYSTEM_GENERATED';
 
 	public function __construct() {}
 }

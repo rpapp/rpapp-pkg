@@ -17,7 +17,8 @@ class Messages
 	const UNKNOWN = 'Unknown';
 	const FAILED_LOGIN = 'Username and or password is incorrect';
 	const PASSWORD_FAILED = 'The provided password is incorrect';
-    const CALL_SERVICE_DESK = 'Please call Service Desk Team';
+    const CALL_SERVICE_DESK = 'Please call Service Desk Team';	
+	const SYSTEM_GENERATED = 'System generated';
 
 	public function __construct() {}
 }
