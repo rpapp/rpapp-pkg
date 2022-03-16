@@ -3,7 +3,7 @@
 namespace RPAPP\Client;
 
 /**
- *
+ * Client system information.
  */
 class ClientSystemInformation
 {
