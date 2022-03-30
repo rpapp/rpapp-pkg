@@ -23,6 +23,8 @@ class LogMessages
 	const INVALID_API = 'INVALID_API';
 	const RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND';	
 	const USER_FOUND = 'USER_FOUND';
+	const QUERY_EXCEPTION_ERROR = 'QUERY_EXCEPTION';
+	const GENERAL_EXCEPTION = 'GENERAL_EXCEPTION';
 
 	public function __construct() {}
 }
