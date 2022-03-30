@@ -43,4 +43,34 @@ class JSONResponses
 
         return response()->json($responseObject, ResponseStatusCodes::NOT_FOUND);
     }
+
+    public function getQueryException(string $code = null, string $message, string $file, string $line, string $trace): ?object
+    {
+        $responseObject = (object) [];                    
+        $responseObject->code = ResponseStatusCodes::BAD_REQUEST;
+        $responseObject->message = $message;
+        $responseObject->logMessage = LogMessages::QUERY_EXCEPTION;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();
+        $responseObject->file = $file;
+        $responseObject->line = $line;
+        $responseObject->trace = $trace;
+
+        return response()->json($responseObject, ResponseStatusCodes::BAD_REQUEST);
+    }
+
+    public function getException(string $code = null, string $message, string $file, string $line, string $trace): ?object
+    {
+        $responseObject = (object) [];                    
+        $responseObject->code = ResponseStatusCodes::BAD_REQUEST;
+        $responseObject->message = $message;
+        $responseObject->logMessage = LogMessages::GENERAL_EXCEPTION;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();
+        $responseObject->file = $file;
+        $responseObject->line = $line;
+        $responseObject->trace = $trace;
+
+        return response()->json($responseObject, ResponseStatusCodes::BAD_REQUEST);
+    }
+
+    
 }
