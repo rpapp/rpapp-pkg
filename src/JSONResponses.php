@@ -13,10 +13,10 @@ class JSONResponses
     public function getInvalidAPIOrResourceNotFound(): ?object
     {
         $responseObject = (object) [];
-        $responseObject['code'] = ResponseStatusCodes::NOT_IMPLEMENTED;
-        $responseObject['message'] = Messages::INVALID_API_OR_RESOURCE_NOT_FOUND;
-        $responseObject['logMessage'] = LogMessages::INVALID_API_OR_RESOURCES_NOT_FOUND;
-        $responseObject['timestamp'] = Carbon::now()->toDateTimeString();
+        $responseObject->code = ResponseStatusCodes::NOT_IMPLEMENTED;
+        $responseObject->message = Messages::INVALID_API_OR_RESOURCE_NOT_FOUND;
+        $responseObject->logMessage = LogMessages::INVALID_API_OR_RESOURCES_NOT_FOUND;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();
 
         return response()->json($responseObject, ResponseStatusCodes::NOT_IMPLEMENTED);
     }
