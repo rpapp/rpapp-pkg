@@ -4,9 +4,6 @@ namespace RPAPP;
 
 class LogMessages
 {
-	//
-	// For authentication;
-	//
 	const SUCCESSFULLY_LOGIN = 'SUCCESSFULLY_LOGIN';
 	const USER_NOT_FOUND = 'USER_NOT_FOUND';
 	const INVALID_CREDENTIALS = 'INVALID_CREDENTIALS';
@@ -22,6 +19,9 @@ class LogMessages
     const UNKNOWN_USER = 'UNKNOWN_USER';
     const CALL_SERVICE_DESK = 'CALL_SERVICE_DESK';
 	const SYSTEM_GENERATED = 'SYSTEM_GENERATED';
+	const API_INVALID_OR_RESOURCE_NOT_FOUND = 'API_INVALID_OR_RESOURCE_NOT_FOUND';
+	const API_INVALID = 'API_INVALID';
+	const RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND';	
 
 	public function __construct() {}
 }
