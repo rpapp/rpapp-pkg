@@ -24,10 +24,10 @@ class JSONResponses
     public function getUserFound(): ?object
     {
         $responseObject = (object) [];
-        $responseObject['code'] = ResponseStatusCodes::OK;
-        $responseObject['message'] = Messages::USER_FOUND;
-        $responseObject['logMessage'] = LogMessages::USER_FOUND;
-        $responseObject['timestamp'] = Carbon::now()->toDateTimeString();
+        $responseObject->code = ResponseStatusCodes::OK;
+        $responseObject->message = Messages::USER_FOUND;
+        $responseObject->logMessage = LogMessages::USER_FOUND;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();
 
         return response()->json($responseObject, ResponseStatusCodes::OK);
     }
