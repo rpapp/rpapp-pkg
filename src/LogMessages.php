@@ -25,6 +25,7 @@ class LogMessages
 	const USER_FOUND = 'USER_FOUND';
 	const QUERY_EXCEPTION_ERROR = 'QUERY_EXCEPTION';
 	const GENERAL_EXCEPTION = 'GENERAL_EXCEPTION';
+	const USER_CREATED = 'USER_CREATED';
 
 	public function __construct() {}
 }
