@@ -72,5 +72,16 @@ class JSONResponses
         return response()->json($responseObject, ResponseStatusCodes::BAD_REQUEST);
     }
 
+    public function getCreated(string $message, string $logMessage): ?object
+    {
+        $responseObject = (object) [];                    
+        $responseObject->code = ResponseStatusCodes::CREATED;
+        $responseObject->message = $message;
+        $responseObject->logMessage = $logMessage;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();       
+
+        return response()->json($responseObject, ResponseStatusCodes::CREATED);
+    }
+
     
 }
