@@ -21,9 +21,10 @@ class JSONResponses
         return response()->json($responseObject, ResponseStatusCodes::NOT_IMPLEMENTED);
     }
 
-    public function getUserFound(): ?object
+    public function getUserFound(object $object): ?object
     {
         $responseObject = (object) [];
+        $responseObject = $object;
         $responseObject->code = ResponseStatusCodes::OK;
         $responseObject->message = Messages::USER_FOUND;
         $responseObject->logMessage = LogMessages::USER_FOUND;
