@@ -23,6 +23,8 @@ class Messages
 	const INVALID_API = 'Invalid API';
 	const RESOURCE_NOT_FOUND = 'Resource not found';
 	const USER_FOUND = 'User found';
+	const QUERY_EXCEPTION = 'Query exception';
+	const GENERAL_EXCEPTION = 'General exception';
 
 	public function __construct() {}
 }
