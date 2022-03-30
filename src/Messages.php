@@ -25,6 +25,7 @@ class Messages
 	const USER_FOUND = 'User found';
 	const QUERY_EXCEPTION = 'Query exception';
 	const GENERAL_EXCEPTION = 'General exception';
+	const USER_CREATED = 'User created';
 
 	public function __construct() {}
 }
