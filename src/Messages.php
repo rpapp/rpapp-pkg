@@ -19,9 +19,10 @@ class Messages
 	const PASSWORD_FAILED = 'The provided password is incorrect';
     const CALL_SERVICE_DESK = 'Please call Service Desk Team';	
 	const SYSTEM_GENERATED = 'System generated';
-	const API_INVALID_OR_RESOURCE_NOT_FOUND = 'API invalid or resouce not found';
-	const API_INVALID = 'API invalid';
+	const INVALID_API_OR_RESOURCE_NOT_FOUND = 'Invalid API or resource not found';
+	const INVALID_API = 'Invalid API';
 	const RESOURCE_NOT_FOUND = 'Resource not found';
+	const USER_FOUND = 'User found';
 
 	public function __construct() {}
 }
