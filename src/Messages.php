@@ -27,6 +27,7 @@ class Messages
 	const GENERAL_EXCEPTION = 'General exception';
 	const USER_CREATED = 'User created';
 	const SYSTEM_ERROR = 'System error';
+	const INTERNAL_SERVER_ERROR = 'Internal server error';
 
 	public function __construct() {}
 }
