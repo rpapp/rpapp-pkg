@@ -27,6 +27,7 @@ class LogMessages
 	const GENERAL_EXCEPTION = 'GENERAL_EXCEPTION';
 	const USER_CREATED = 'USER_CREATED';
 	const SYSTEM_ERROR = 'SYSTEM_ERROR';
+	const INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR';
 
 	public function __construct() {}
 }
