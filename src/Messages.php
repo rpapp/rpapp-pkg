@@ -28,6 +28,10 @@ class Messages
 	const USER_CREATED = 'User created';
 	const SYSTEM_ERROR = 'System error';
 	const INTERNAL_SERVER_ERROR = 'Internal server error';
+	const CREATED = 'Created';
+	const UPDATED = 'Updated';	
+	const DELETED = 'Deleted';
+	const EMPLOYEE_CODE_UPDATED = 'Employee code updated';
 
 	public function __construct() {}
 }

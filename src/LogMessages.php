@@ -28,6 +28,10 @@ class LogMessages
 	const USER_CREATED = 'USER_CREATED';
 	const SYSTEM_ERROR = 'SYSTEM_ERROR';
 	const INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR';
+	const CREATED = 'CREATED';
+	const UPDATED = 'UPDATED';
+	const DELETED = 'DELETED';
+	const EMPLOYEE_CODE_UPDATED = 'EMPLOYEE_CODE_UPDATED';	
 
 	public function __construct() {}
 }
