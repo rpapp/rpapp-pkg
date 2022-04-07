@@ -100,7 +100,7 @@ class JSONResponses
      * @param string|null $message
      * @param string|null $logMessage
      */
-    public function showMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
+    public function getMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
     {
         $responseObject = (object) [];
         $responseObject->code = $responseStatusCodes;
