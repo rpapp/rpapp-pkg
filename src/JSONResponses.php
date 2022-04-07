@@ -80,8 +80,17 @@ class JSONResponses
         $responseObject->logMessage = $logMessage;
         $responseObject->timestamp = Carbon::now()->toDateTimeString();       
 
-        return response()->json($responseObject, ResponseStatusCodes::CREATED);
+        return response()->json($responseObject, ResponseStatusCodes::OK);
     }
 
-    
+    public function getUpdated(string $message, string $logMessag): ?object
+    {
+        $responseObject = (object) [];                    
+        $responseObject->code = ResponseStatusCodes::CREATED;
+        $responseObject->message = $message;
+        $responseObject->logMessage = $logMessage;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();       
+
+        return response()->json($responseObject, ResponseStatusCodes::OK);
+    }   
 }
