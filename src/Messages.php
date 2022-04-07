@@ -32,6 +32,7 @@ class Messages
 	const UPDATED = 'Updated';	
 	const DELETED = 'Deleted';
 	const EMPLOYEE_CODE_UPDATED = 'Employee code updated';
+	const NO_RECORD_FOUND = 'No record found';
 
 	public function __construct() {}
 }
