@@ -75,7 +75,7 @@ class JSONResponses
     public function getCreated(string $message, string $logMessage): ?object
     {
         $responseObject = (object) [];                    
-        $responseObject->code = ResponseStatusCodes::CREATED;
+        $responseObject->code = ResponseStatusCodes::OK;
         $responseObject->message = $message;
         $responseObject->logMessage = $logMessage;
         $responseObject->timestamp = Carbon::now()->toDateTimeString();       
@@ -86,11 +86,28 @@ class JSONResponses
     public function getUpdated(string $message, string $logMessag): ?object
     {
         $responseObject = (object) [];                    
-        $responseObject->code = ResponseStatusCodes::CREATED;
+        $responseObject->code = ResponseStatusCodes::OK;
         $responseObject->message = $message;
         $responseObject->logMessage = $logMessage;
         $responseObject->timestamp = Carbon::now()->toDateTimeString();       
 
         return response()->json($responseObject, ResponseStatusCodes::OK);
     }   
+
+    /**
+     * General or common response message.
+     * @param string|null $responseStatusCodes 
+     * @param string|null $message
+     * @param string|null $logMessage
+     */
+    public function showMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
+    {
+        $responseObject = (object) [];
+        $responseObject->code = $responseStatusCodes;
+        $responseObject->message = $message;
+        $responseObject->logMessage = $logMessage;
+        $responseObject->timeStamp = Carbon::now()->toDateTimeString();
+
+        return response()->json($responseObject, $responseStatusCodes);
+    }
 }
