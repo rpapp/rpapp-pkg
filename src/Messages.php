@@ -39,6 +39,7 @@ class Messages
 	const RECORD_CREATED = 'Record created';
 	const RECORD_UPDATED = 'Record updated';
 	const RECORD_DELETED = 'Record deleted';
+	const RECORD_FOUND = 'Record found';
 	
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
