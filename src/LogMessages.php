@@ -34,7 +34,7 @@ class LogMessages
 	const SUCCESS = 'SUCCESS';
 	const FAILED = 'FAILED';
 
-	// General or Common
+	// Generic or Common
 	const ERROR = 'ERROR';
 	const RECORD_CREATED = 'RECORD_CREATED';
 	const RECORD_UPDATED = 'RECORD_UPDATED';

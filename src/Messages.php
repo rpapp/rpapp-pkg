@@ -34,7 +34,7 @@ class Messages
 	const SUCCESS = 'Success';
 	const FAILED = 'Failed';
 
-	// General or Common
+	// Generic or Common
 	const ERROR = 'Error';
 	const RECORD_CREATED = 'Record created';
 	const RECORD_UPDATED = 'Record updated';
