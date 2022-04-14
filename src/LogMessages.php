@@ -23,11 +23,9 @@ class LogMessages
 	const INVALID_API = 'INVALID_API';
 	const RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND';	
 	const USER_FOUND = 'USER_FOUND';
-	const QUERY_EXCEPTION_ERROR = 'QUERY_EXCEPTION';
-	const GENERAL_EXCEPTION = 'GENERAL_EXCEPTION';
 	const USER_CREATED = 'USER_CREATED';
 	const SYSTEM_ERROR = 'SYSTEM_ERROR';
-	const INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR';
+	
 	const CREATED = 'CREATED';
 	const UPDATED = 'UPDATED';
 	const DELETED = 'DELETED';
@@ -36,5 +34,19 @@ class LogMessages
 	const SUCCESS = 'SUCCESS';
 	const FAILED = 'FAILED';
 
+	const ERROR = 'ERROR';
+
+	// Exception
+	const QUERY_EXCEPTION = 'QUERY_EXCEPTION';
+	const GENERAL_EXCEPTION = 'GENERAL_EXCEPTION';
+	const ERROR_EXCEPTION = 'ERROR_EXCEPTION';
+
+	// Response Status
+	const INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR';
+	const BAD_REQUEST = 'BAD_REQUEST';
+
+	/**
+	 * Constructor
+	 */
 	public function __construct() {}
 }

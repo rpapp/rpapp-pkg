@@ -23,11 +23,9 @@ class Messages
 	const INVALID_API = 'Invalid API';
 	const RESOURCE_NOT_FOUND = 'Resource not found';
 	const USER_FOUND = 'User found';
-	const QUERY_EXCEPTION = 'Query exception';
-	const GENERAL_EXCEPTION = 'General exception';
 	const USER_CREATED = 'User created';
 	const SYSTEM_ERROR = 'System error';
-	const INTERNAL_SERVER_ERROR = 'Internal server error';
+
 	const CREATED = 'Created';
 	const UPDATED = 'Updated';	
 	const DELETED = 'Deleted';
@@ -36,5 +34,18 @@ class Messages
 	const SUCCESS = 'Success';
 	const FAILED = 'Failed';
 
+	const ERROR = 'Error';
+	
+	// Exception
+	const QUERY_EXCEPTION = 'Query exception';
+	const GENERAL_EXCEPTION = 'General exception';
+
+	// Response Status
+	const INTERNAL_SERVER_ERROR = 'Internal server error';
+	const BAD_REQUEST = 'Bad request';
+
+	/**
+	 * Constructor
+	 */
 	public function __construct() {}
 }
