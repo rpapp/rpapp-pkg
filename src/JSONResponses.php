@@ -10,6 +10,10 @@ use RPAPP\ResponseStatusCodes;
 
 class JSONResponses
 {
+    /**
+     * Get invalid API or resouce not found message.
+     * @return object|null
+     */
     public function getInvalidAPIOrResourceNotFound(): ?object
     {
         $responseObject = (object) [];
@@ -43,11 +47,30 @@ class JSONResponses
 
         return response()->json($responseObject, ResponseStatusCodes::NOT_FOUND);
     }
-
-    public function getQueryException(string $code = null, string $message, string $file, string $line, string $trace): ?object
+    /**
+     * Get query exception message.
+     * 
+     * @param string|null $code
+     * @param string|null $message
+     * @param string|null $file
+     * @param string|null $line
+     * @param string|null $trace
+     * 
+     * @return object|null
+     */
+    public function getQueryException(string $code = null, string $message = null, string $file = null, string $line = null, string $trace = null): ?object
     {
         $responseObject = (object) [];                    
-        $responseObject->code = ResponseStatusCodes::BAD_REQUEST;
+        
+        if($code == 0 || $code == null || $code == '')
+        {
+            $responseObject->code = ResponseStatusCodes::BAD_REQUEST;
+        }
+        else
+        {
+            $responseObject->code = $code;
+        }
+        
         $responseObject->message = $message;
         $responseObject->logMessage = LogMessages::QUERY_EXCEPTION;
         $responseObject->timestamp = Carbon::now()->toDateTimeString();
@@ -57,11 +80,30 @@ class JSONResponses
 
         return response()->json($responseObject, ResponseStatusCodes::BAD_REQUEST);
     }
-
-    public function getException(string $code = null, string $message, string $file, string $line, string $trace): ?object
+    /**
+     * Get exception message.
+     * 
+     * @param string|null $code
+     * @param string|null $message
+     * @param string|null $file
+     * @param string|null $line
+     * @param string|null $trace
+     * 
+     * @return object|null
+     */
+    public function getException(string $code = null, string $message = null, string $file = null, string $line = null, string $trace = null): ?object
     {
-        $responseObject = (object) [];                    
-        $responseObject->code = ResponseStatusCodes::BAD_REQUEST;
+        $responseObject = (object) [];
+
+        if($code == 0 || $code == null || $code == '')
+        {
+            $responseObject->code = ResponseStatusCodes::INTERNAL_SERVER_ERROR;
+        }
+        else
+        {
+            $responseObject->code = $code;
+        }
+
         $responseObject->message = $message;
         $responseObject->logMessage = LogMessages::GENERAL_EXCEPTION;
         $responseObject->timestamp = Carbon::now()->toDateTimeString();
@@ -93,12 +135,14 @@ class JSONResponses
 
         return response()->json($responseObject, ResponseStatusCodes::OK);
     }   
-
     /**
      * General or common response message.
+     * 
      * @param string|null $responseStatusCodes 
      * @param string|null $message
      * @param string|null $logMessage
+     * 
+     * @return object|null
      */
     public function getMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
     {
@@ -109,5 +153,38 @@ class JSONResponses
         $responseObject->timeStamp = Carbon::now()->toDateTimeString();
 
         return response()->json($responseObject, $responseStatusCodes);
+    }
+    /**
+     * Get internal server error message.
+     * 
+     * @return object|null
+     */
+    public function getInternalServerError(): ?object
+    {
+        $responseObject = (object) [];
+        $responseObject->code = ResponseStatusCodes::INTERNAL_SERVER_ERROR;
+        $responseObject->message = Messages::INTERNAL_SERVER_ERROR;
+        $responseObject->logMessage = LogMessages::INTERNAL_SERVER_ERROR;
+        $responseObject->timeStamp = Carbon::now()->toDateTimeString();
+
+        return response()->json($responseObject, $responseStatusCodes);
+    }
+    /**
+     * Get not found message.
+     * 
+     * @param string|null $message
+     * @param string|null $logMessage
+     * 
+     * @return object|null
+     */
+    public function getNotFound(string $message = null, string $logMessage = null): ?object
+    {
+        $responseObject = (object) [];                    
+        $responseObject->code = ResponseStatusCodes::NOT_FOUND;
+        $responseObject->message = $message;
+        $responseObject->logMessage = $logMessage;
+        $responseObject->timestamp = Carbon::now()->toDateTimeString();
+
+        return response()->json($responseObject, ResponseStatusCodes::NOT_FOUND);
     }
 }
