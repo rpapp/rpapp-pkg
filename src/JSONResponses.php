@@ -85,33 +85,47 @@ class JSONResponses
      * 
      * @param string|null $code
      * @param string|null $message
+     * @param string|null $logMessage
      * @param string|null $file
      * @param string|null $line
      * @param string|null $trace
      * 
      * @return object|null
      */
-    public function getException(string $code = null, string $message = null, string $file = null, string $line = null, string $trace = null): ?object
+    public function getException(string $code = null, string $codeMessage = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null): ?object
     {
-        $responseObject = (object) [];
+        // $responseObject = (object) [];
 
-        if($code == 0 || $code == null || $code == '')
-        {
-            $responseObject->code = ResponseStatusCodes::INTERNAL_SERVER_ERROR;
-        }
-        else
-        {
-            $responseObject->code = $code;
-        }
+        // if($code == 0 || $code == null || $code == '')
+        // {
+        //     $responseObject->code = ResponseStatusCodes::INTERNAL_SERVER_ERROR;
+        // }
+        // else
+        // {
+        //     $responseObject->code = $code;
+        // }
 
-        $responseObject->message = $message;
-        $responseObject->logMessage = LogMessages::GENERAL_EXCEPTION;
-        $responseObject->timestamp = Carbon::now()->toDateTimeString();
-        $responseObject->file = $file;
-        $responseObject->line = $line;
-        $responseObject->trace = $trace;
+        // $responseObject->message = $message;
+        // $responseObject->logMessage = $logMessage;
+        // $responseObject->timestamp = Carbon::now()->toDateTimeString();
+        // $responseObject->file = $file;
+        // $responseObject->line = $line;
+        // $responseObject->trace = $trace;
 
-        return response()->json($responseObject, ResponseStatusCodes::BAD_REQUEST);
+        // return response()->json($responseObject, ResponseStatusCodes::INTERNAL_SERVER_ERROR);
+        return response()->json([
+            'code' => $code,
+            'codeMessage' => $codeMessage,
+            'message' => $message,
+            'logMessage' => $logMessage,
+            'timestamps' => Carbon::now()->toDateTimeString(),
+            'exceptionDetails' =>
+            [
+                'file' => $file,
+                'line' => $line,
+                'trace' => $trace
+            ]
+        ]);
     }
 
     public function getCreated(string $message, string $logMessage): ?object
@@ -167,7 +181,7 @@ class JSONResponses
         $responseObject->logMessage = LogMessages::INTERNAL_SERVER_ERROR;
         $responseObject->timeStamp = Carbon::now()->toDateTimeString();
 
-        return response()->json($responseObject, $responseStatusCodes);
+        return response()->json($responseObject, ResponseStatusCodes::INTERNAL_SERVER_ERROR);
     }
     /**
      * Get not found message.
