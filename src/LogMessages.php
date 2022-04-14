@@ -33,6 +33,8 @@ class LogMessages
 	const DELETED = 'DELETED';
 	const EMPLOYEE_CODE_UPDATED = 'EMPLOYEE_CODE_UPDATED';	
 	const NO_RECORD_FOUND = 'NO_RECORD_FOUND';
+	const SUCCESS = 'SUCCESS';
+	const FAILED = 'FAILED';
 
 	public function __construct() {}
 }
