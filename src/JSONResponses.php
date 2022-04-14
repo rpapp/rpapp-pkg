@@ -150,7 +150,7 @@ class JSONResponses
         return response()->json($responseObject, ResponseStatusCodes::OK);
     }   
     /**
-     * General or common response message.
+     * Generic or common response message.
      * 
      * @param string|null $responseStatusCodes 
      * @param string|null $message
@@ -160,13 +160,12 @@ class JSONResponses
      */
     public function getMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
     {
-        $responseObject = (object) [];
-        $responseObject->code = $responseStatusCodes;
-        $responseObject->message = $message;
-        $responseObject->logMessage = $logMessage;
-        $responseObject->timeStamp = Carbon::now()->toDateTimeString();
-
-        return response()->json($responseObject, $responseStatusCodes);
+        return response()->json([
+            'code' => $responseStatusCodes,
+            'message' => $message,
+            'logMessage' => $logMessage,
+            'timestamp' => Carbon::now()->toDateTimeString()
+        ], $responseStatusCodes);
     }
     /**
      * Get internal server error message.
