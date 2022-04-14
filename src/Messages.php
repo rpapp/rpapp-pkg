@@ -39,6 +39,8 @@ class Messages
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
 	const GENERAL_EXCEPTION = 'General exception';
+	const ERROR_EXCEPTION = 'Error Exception';
+	const EXCEPTION = 'Exception';
 
 	// Response Status
 	const INTERNAL_SERVER_ERROR = 'Internal server error';
