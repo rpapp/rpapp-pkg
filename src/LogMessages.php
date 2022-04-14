@@ -34,7 +34,11 @@ class LogMessages
 	const SUCCESS = 'SUCCESS';
 	const FAILED = 'FAILED';
 
+	// General or Common
 	const ERROR = 'ERROR';
+	const RECORD_CREATED = 'RECORD_CREATED';
+	const RECORD_UPDATED = 'RECORD_UPDATED';
+	const RECORD_DELETED = 'RECORD_DELETED';
 
 	// Exception
 	const QUERY_EXCEPTION = 'QUERY_EXCEPTION';
