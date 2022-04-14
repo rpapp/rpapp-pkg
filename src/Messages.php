@@ -33,6 +33,8 @@ class Messages
 	const DELETED = 'Deleted';
 	const EMPLOYEE_CODE_UPDATED = 'Employee code updated';
 	const NO_RECORD_FOUND = 'No record found';
+	const SUCCESS = 'Success';
+	const FAILED = 'Failed';
 
 	public function __construct() {}
 }
