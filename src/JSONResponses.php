@@ -178,20 +178,20 @@ class JSONResponses
     /**
      * Set generic or common response message.
      * 
-     * @param string|null $responseStatusCodes
+     * @param string|null $responseStatusCode
      * @param string|null $message
      * @param string|null $logMessage
      * 
      * @return object|null
      */
-    public function setMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
+    public function setMessage(int $responseStatusCode = null, string $message = null, string $logMessage = null): ?object
     {
         return response()->json([
-            'code' => $responseStatusCodes,
+            'code' => $responseStatusCode,
             'message' => $message,
             'logMessage' => $logMessage,
             'timestamp' => Carbon::now()->toDateTimeString()
-        ], $responseStatusCodes);
+        ], $responseStatusCode);
     }
     /**
      * Get internal server error message.
