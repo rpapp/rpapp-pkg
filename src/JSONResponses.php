@@ -168,6 +168,24 @@ class JSONResponses
         ], $responseStatusCodes);
     }
     /**
+     * Set generic or common response message.
+     * 
+     * @param string|null $responseStatusCodes
+     * @param string|null $message
+     * @param string|null $logMessage
+     * 
+     * @return object|null
+     */
+    public function setMessage(string $responseStatusCodes = null, string $message = null, string $logMessage = null): ?object
+    {
+        return response()->json([
+            'code' => $responseStatusCodes,
+            'message' => $message,
+            'logMessage' => $logMessage,
+            'timestamp' => Carbon::now()->toDateTimeString()
+        ], $responseStatusCodes);
+    }
+    /**
      * Get internal server error message.
      * 
      * @return object|null
