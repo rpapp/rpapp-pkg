@@ -12,17 +12,25 @@ class JSONResponses
 {
     /**
      * Get invalid API or resouce not found message.
+     * 
      * @return object|null
      */
     public function getInvalidAPIOrResourceNotFound(): ?object
     {
-        $responseObject = (object) [];
-        $responseObject->code = ResponseStatusCodes::NOT_IMPLEMENTED;
-        $responseObject->message = Messages::INVALID_API_OR_RESOURCE_NOT_FOUND;
-        $responseObject->logMessage = LogMessages::INVALID_API_OR_RESOURCE_NOT_FOUND;
-        $responseObject->timestamp = Carbon::now()->toDateTimeString();
+        // $responseObject = (object) [];
+        // $responseObject->code = ResponseStatusCodes::NOT_IMPLEMENTED;
+        // $responseObject->message = Messages::INVALID_API_OR_RESOURCE_NOT_FOUND;
+        // $responseObject->logMessage = LogMessages::INVALID_API_OR_RESOURCE_NOT_FOUND;
+        // $responseObject->timestamp = Carbon::now()->toDateTimeString();
 
-        return response()->json($responseObject, ResponseStatusCodes::NOT_IMPLEMENTED);
+        // return response()->json($responseObject, ResponseStatusCodes::NOT_IMPLEMENTED);
+
+        return response()->json([
+            'code' => ResponseStatusCodes::NOT_IMPLEMENTED,
+            'message' => Messages::INVALID_API_OR_RESOURCE_NOT_FOUND,
+            'logMessage' => LogMessages::INVALID_API_OR_RESOURCE_NOT_FOUND,
+            'timestamp' => Carbon::now()->toDateTimeString()
+        ]);
     }
 
     public function getUserFound(object $object): ?object
