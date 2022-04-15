@@ -30,7 +30,6 @@ class Messages
 	const UPDATED = 'Updated';	
 	const DELETED = 'Deleted';
 	const EMPLOYEE_CODE_UPDATED = 'Employee code updated';
-	const NO_RECORD_FOUND = 'No record found';
 	const SUCCESS = 'Success';
 	const FAILED = 'Failed';
 
@@ -40,6 +39,8 @@ class Messages
 	const RECORD_UPDATED = 'Record updated';
 	const RECORD_DELETED = 'Record deleted';
 	const RECORD_FOUND = 'Record found';
+	const NO_RECORD_FOUND = 'No record found';
+	const NO_RECORD_EXISTS = 'No record exists';
 	
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
