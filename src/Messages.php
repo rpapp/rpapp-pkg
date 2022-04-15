@@ -41,6 +41,7 @@ class Messages
 	const RECORD_FOUND = 'Record found';
 	const NO_RECORD_FOUND = 'No record found';
 	const NO_RECORD_EXISTS = 'No record exists';
+	const NOT_AVAILABLE = 'Not available';
 	
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
