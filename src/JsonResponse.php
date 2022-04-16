@@ -22,7 +22,7 @@ class JsonResponse
             'message' => Message::INVALID_API_OR_RESOURCE_NOT_FOUND,
             'logMessage' => LogMessage::INVALID_API_OR_RESOURCE_NOT_FOUND,
             'timestamp' => Carbon::now()->toDateTimeString()
-        ], ResponseCodeStatus::NOT_IMPLEMENTED);
+        ], ResponseStatusCode::NOT_IMPLEMENTED);
     }
 
     // public function getUserFound(object $object): ?object
