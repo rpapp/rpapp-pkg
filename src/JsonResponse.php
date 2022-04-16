@@ -8,7 +8,7 @@ use RPAPP\Message;
 use RPAPP\LogMessage;
 use RPAPP\ResponseStatusCode;
 
-class JSONResponse
+class JsonResponse
 {
     /**
      * Get invalid API or resouce not found message.
