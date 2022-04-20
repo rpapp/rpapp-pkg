@@ -33,14 +33,15 @@ class DiagnosticLogs
      * @param string|null $line
      * @param string|null $trace
      */
-    public function generate(string $projectCode = null, string $fullname = null, string $username = null, string $role = null, string $position = null, string $department = null, string $hostname = null, string $ipAddress = null, string $os = null,
-        string $code = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null,
+    public function generate(string $projectCode = null, string $fullname = null, string $username = null, string $role = null, string $position = null, string $department = null, 
+        string $hostname = null, string $ipAddress = null, string $os = null, 
+        string $code = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null, 
         bool $upload = true)
     {
         $result = null;
 
         $uniqueIdentifier = new UniqueIdentifier();
-        $uid = $uniqueIdentifier->generate(UniqueIdentifier::RANDBOM_BYTES, 8);
+        $uid = $uniqueIdentifier->generate(UniqueIdentifier::RANDOM_BYTES, 8);
 
         $xw = xmlwriter_open_memory();
         xmlwriter_set_indent($w, 4);
