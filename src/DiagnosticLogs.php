@@ -44,7 +44,7 @@ class DiagnosticLogs
         $uid = $uniqueIdentifier->generate(UniqueIdentifier::RANDOM_BYTES, 8);
 
         $xw = xmlwriter_open_memory();
-        xmlwriter_set_indent($w, 4);
+        xmlwriter_set_indent($xw, 4);
         $res = xmlwriter_set_indent_string($xw, ' ');
 
         xmlwriter_start_document($xw, '1.0', 'UTF-8'); // Start
