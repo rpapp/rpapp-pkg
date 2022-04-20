@@ -144,7 +144,7 @@ class DiagnosticLogs
         // Generate filename.
         $filename = $date.'_'.$time.'_'.$username.'_diagnostic-logs.txt';
 
-        Storage::disk('local')->put('diagnostic_logs/'.$filename);
+        Storage::disk('local')->put('diagnostic_logs/'.$filename, xmlwriter_output_memory($xw));
 
         $result = $filename;
 
