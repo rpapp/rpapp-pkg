@@ -44,6 +44,14 @@ class DiagnosticLogs
         $uniqueIdentifier = new UniqueIdentifier();
         $uid = $uniqueIdentifier->generate(UniqueIdentifier::RANDOM_BYTES, 8);
 
+        $currentDate = new DateTime();
+        $currentTime = new DateTime();
+        $date = $currentDate->format('Ymd');
+        $time = $currentTime->format('His');
+
+        // Generate filename.
+        $filename = $date.'_'.$time.'_'.$username.'_diagnostic-logs.txt';
+
         $xw = xmlwriter_open_memory();
         xmlwriter_set_indent($xw, 4);
         $res = xmlwriter_set_indent_string($xw, ' ');
@@ -62,6 +70,10 @@ class DiagnosticLogs
                 xmlwriter_start_attribute($xw, 'upload');
                     xmlwriter_text($xw, $upload);
                 xmlwriter_end_attribute($xw);
+
+                xmlwriter_start_element($xw, 'filename');
+                    xmlwriter_text($xw, $filename);
+                xmlwriter_end_element($xw);
 
                 xmlwriter_start_element($xw, 'datetime-generated');
                     xmlwriter_text($xw, Carbon::now()->toDateTimeString());
@@ -135,14 +147,6 @@ class DiagnosticLogs
             xmlwriter_end_element($xw);
         
         xmlwriter_end_document($xw); // End
-
-        $currentDate = new DateTime();
-        $currentTime = new DateTime();
-        $date = $currentDate->format('Ymd');
-        $time = $currentTime->format('His');
-
-        // Generate filename.
-        $filename = $date.'_'.$time.'_'.$username.'_diagnostic-logs.txt';
 
         Storage::disk('local')->put('diagnostic_logs/'.$filename, xmlwriter_output_memory($xw));
 
