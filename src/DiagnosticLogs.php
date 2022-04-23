@@ -54,7 +54,7 @@ class DiagnosticLogs
 
         $xw = xmlwriter_open_memory();
         xmlwriter_set_indent($xw, 4);
-        $res = xmlwriter_set_indent_string($xw, ' ');
+        $res = xmlwriter_set_indent_string($xw, '    ');
 
         xmlwriter_start_document($xw, '1.0', 'UTF-8'); // Start
 
@@ -75,7 +75,7 @@ class DiagnosticLogs
                     xmlwriter_text($xw, $filename);
                 xmlwriter_end_element($xw);
 
-                xmlwriter_start_element($xw, 'datetime-generated');
+                xmlwriter_start_element($xw, 'timestamp');
                     xmlwriter_text($xw, Carbon::now()->toDateTimeString());
                 xmlwriter_end_element($xw);
 
