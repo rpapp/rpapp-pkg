@@ -43,6 +43,7 @@ class Message
 	const NO_RECORD_EXISTS = 'No record exists';
 	const NOT_AVAILABLE = 'Not available';
 	const TOO_MANY_RECORDS = 'Too many records';
+	const IDENTIFIER_DOES_NOT_EXISTS = 'Identifier does not exists';
 	
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
