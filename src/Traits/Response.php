@@ -112,11 +112,15 @@ trait Response
     {
         return $this->doNotRender;
     }
-    public function renderState()
+    public function renderState(): ?string
     {
+        $result = null;
+
         if($this->getDoNotRenderState())
         {
-            return '';
+            $result = '';
         }
+
+        return $result;
     }
 }
