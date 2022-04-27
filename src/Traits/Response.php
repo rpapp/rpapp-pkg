@@ -87,4 +87,20 @@ trait Response
     {
         return $this->diagnosticLogFile;
     }
+    /**
+     * Get error code.
+     * @return string|null
+     */
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+    /**
+     * Get log message.
+     * @return string|null
+     */
+    public function getLogMessage(): ?string
+    {
+        return $this->logMessage;
+    }
 }
