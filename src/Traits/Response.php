@@ -67,7 +67,7 @@ trait Response
         $clientSystemInformation = new ClientSystemInformation();
 
         $diagnosticLog = new DiagnosticLogs();
-        $this->diagnosticLogFile = $diagnosticLog->generate($projectCode, $userFullname, $username, $userSystemRole, $userPosition, $userDeparment, 
+        $this->diagnosticLogFile = $diagnosticLog->generate($projectCode, $userFullname, $username, $userSystemRole, $userPosition, $userDepartment, 
             $clientSystemInformation->getHostname(), $clientSystemInformation->getAllIPAddress(), $clientSystemInformation->getOperatingSystem(),
             $code, $exception, $message, $logMessage, $file, $line, $trace);
     }
