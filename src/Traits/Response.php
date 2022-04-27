@@ -114,7 +114,7 @@ trait Response
     }
     public function renderState()
     {
-        if(!$this->doNotRender)
+        if($this->getDoNotRenderState())
         {
             $result = '';
         }
