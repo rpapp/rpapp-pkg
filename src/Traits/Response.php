@@ -25,6 +25,7 @@ trait Response
     public ?bool $hasError = null;
     public ?bool $isDisabled = null; // Use for components or elements `disabled` attribute.
     public ?bool $errorOnRender = null; // Use in livewire's render function.
+    public ?bool $doNotRender = null;
     // File Handler.
     public ?string $diagnosticLogFile = null;
     // Loader Handler.
@@ -102,5 +103,13 @@ trait Response
     public function getLogMessage(): ?string
     {
         return $this->logMessage;
+    }
+    public function setDoNotRenderState(bool $doNotRender = null): ?bool
+    {
+        return $this->doNotRender = $doNotRender;
+    }
+    public function getDoNotRenderState(): ?bool
+    {
+        return $this->doNotRender;
     }
 }
