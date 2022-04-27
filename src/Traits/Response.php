@@ -4,6 +4,7 @@ namespace RPAPP\Traits;
 
 use Carbon\Carbon;
 
+use RPAPP\DiagnosticLogs;
 use RPAPP\Client\ClientSystemInformation;
 
 trait Response
