@@ -26,7 +26,7 @@ trait Response
     public ?bool $isDisabled = null; // Use for components or elements `disabled` attribute.
     public ?bool $errorOnRender = null; // Use in livewire's render function.
     // File Handler.
-    protected ?string $diagnosticLogFile = null;
+    public ?string $diagnosticLogFile = null;
     // Loader Handler.
     public ?string $loaderMessage = null;
     // Test Var
