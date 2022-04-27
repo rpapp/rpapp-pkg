@@ -116,9 +116,7 @@ trait Response
     {
         if($this->getDoNotRenderState())
         {
-            $result = '';
+            return '';
         }
-
-        return $result;
     }
 }
