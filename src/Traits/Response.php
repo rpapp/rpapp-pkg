@@ -114,7 +114,7 @@ trait Response
     }
     public function renderState(): ?string
     {
-        $result = null;
+        $result = false;
 
         if($this->getDoNotRenderState())
         {
@@ -122,5 +122,25 @@ trait Response
         }
 
         return $result;
+    }
+    public function resetErrorFlags()
+    {
+        $this->code = null;
+        $this->exception = null;
+        $this->message = null;
+        $this->logMessage = null;
+        $this->timestamp = null;
+        $this->file = null;
+        $this->line = null;
+        $this->trace = null;
+    
+        $this->hasError = null;
+        $this->isDisabled = null;
+        $this->errorOnRender = null;
+        $this->doNotRender = null;
+    
+        $this->diagnosticLogFile = null;
+    
+        $this->loaderMessage = null;
     }
 }
