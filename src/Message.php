@@ -46,6 +46,10 @@ class Message
 	const NOT_AVAILABLE = 'Not available';
 	const TOO_MANY_RECORDS = 'Too many records';
 	const IDENTIFIER_DOES_NOT_EXISTS = 'Identifier does not exists';
+
+	const USER_SYSTEM_ROLE_CREATED = 'User system role created';
+	const USER_SYSTEM_ROLE_UPDATED = 'User system role updated';
+	const USER_SYSTEM_ROLE_DELETED = 'User system role deletec';
 	
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
