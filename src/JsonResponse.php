@@ -25,6 +25,16 @@ class JsonResponse
         ], ResponseStatusCode::NOT_IMPLEMENTED);
     }
 
+    public function setMessage(int $responseStatusCode, string $message, string $logMessage): ?object
+    {
+        return response()->json([
+            'code' => $responseStatusCode,
+            'message' => trim($message),
+            'logMessage' => trim($logMessage),
+            'timestamp' => Carbon::now()->toDateTimeString()
+        ]);
+    }
+
     // public function getUserFound(object $object): ?object
     // {
     //     $responseObject = (object) [];
