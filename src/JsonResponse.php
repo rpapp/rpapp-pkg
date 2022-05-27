@@ -62,10 +62,11 @@ class JsonResponse
      * @param string|null $trace
      * @return object
      **/
-    public function setErrorExceptionMessage(int $responseStatusCode = 0, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
+    public function setErrorExceptionMessage(int $responseStatusCode = 0, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
     {
         return response()->json([
             'code' => $responseStatusCode,
+            'exception' => $exception,
             'message' => $message,
             'logMessage' => $logMessage,
             'timestamp' => Carbon::now()->toDateTimeString(),
