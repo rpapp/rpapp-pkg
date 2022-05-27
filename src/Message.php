@@ -49,7 +49,7 @@ class Message
 
 	const USER_SYSTEM_ROLE_CREATED = 'User system role created';
 	const USER_SYSTEM_ROLE_UPDATED = 'User system role updated';
-	const USER_SYSTEM_ROLE_DELETED = 'User system role deletec';
+	const USER_SYSTEM_ROLE_DELETED = 'User system role deleted';
 	
 	// Exception
 	const QUERY_EXCEPTION = 'Query exception';
