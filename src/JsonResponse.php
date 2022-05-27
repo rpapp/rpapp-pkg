@@ -30,7 +30,7 @@ class JsonResponse
      * @param string|null $logMessage
      * @return object|null
      **/
-    public function setMessage(int $responseStatusCode = null, string $message = null, string $logMessage = null): ?object
+    public function setMessage(int $responseStatusCode = 0, string $message = null, string $logMessage = null): ?object
     {
         return response()->json([
             'code' => $responseStatusCode,
@@ -51,5 +51,29 @@ class JsonResponse
             'logMessage' => LogMessage::INTERNAL_SERVER_ERROR,
             'timestamp' => Carbon::now()->toDateTimeString()
         ], ResponseStatusCode::INTERNAL_SERVER_ERROR);
+    }
+    /**
+     * Set error exception message.
+     * @param int $responseStatusCode
+     * @param string|null $message
+     * @param string|null $logMessage
+     * @param string|null $file
+     * @param string|null $line
+     * @param string|null $trace
+     * @return object
+     **/
+    public function setErrorExceptionMessage(int $responseStatusCode = 0, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
+    {
+        return response()->json([
+            'code' => $responseStatusCode,
+            'message' => $message,
+            'logMessage' => $logMessage,
+            'timestamp' => Carbon::now()->toDateTimeString(),
+            'exceptionDetails' => [
+                'file' => $file,
+                'line' => $line,
+                'trace' => $trace
+            ]
+        ], $responseStatusCode);
     }
 }
