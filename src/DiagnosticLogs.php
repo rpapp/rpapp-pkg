@@ -34,8 +34,8 @@ class DiagnosticLogs
      * @param string|null $line
      * @param string|null $trace
      */
-    public function generate(string $projectCode = null, string $fullname = null, string $username = null, string $role = null, string $position = null, string $department = null, 
-        string $hostname = null, string $ipAddress = null, string $os = null, 
+    public function generate(string $projectCode = null, string $module = null, 
+        string $fullname = null, string $username = null, string $role = null, string $position = null, string $department = null, string $hostname = null, string $ipAddress = null, string $os = null, 
         string $code = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null, 
         bool $upload = true)
     {
@@ -61,6 +61,10 @@ class DiagnosticLogs
             xmlwriter_start_element($xw, 'diagnostic-logs');
                 xmlwriter_start_attribute($xw, 'project-code');
                     xmlwriter_text($xw, $projectCode);
+                xmlwriter_end_attribute($xw);
+
+                xmlwriter_start_attribute($xw, 'module');
+                    xmlwriter_text($xw, $module);
                 xmlwriter_end_attribute($xw);
 
                 xmlwriter_start_attribute($xw, 'identifier');
