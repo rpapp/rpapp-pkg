@@ -35,6 +35,7 @@ trait Response
     /**
      * Set error.
      * @param string|null $projectCode
+     * @param string|null $module
      * @param string|null $userFullname
      * @param string|null $username
      * @param string|null $userSystemRole
@@ -48,7 +49,7 @@ trait Response
      * @param string|null $line
      * @param string|null $trace
      */
-    public function setError(string $projectCode = null, 
+    public function setError(string $projectCode = null, string $module = null,
         string $userFullname = null, string $username = null, string $userSystemRole = null, string $userPosition = null, string $userDepartment = null,
         string $code = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
     {
@@ -68,10 +69,10 @@ trait Response
         $clientSystemInformation = new ClientSystemInformation();
 
         $diagnosticLog = new DiagnosticLogs();
-        $this->diagnosticLogFile = $diagnosticLog->generate($projectCode, $userFullname, $username, $userSystemRole, $userPosition, $userDepartment, 
+        $this->diagnosticLogFile = $diagnosticLog->generate($projectCode, $module, $userFullname, $username, $userSystemRole, $userPosition, $userDepartment, 
             $clientSystemInformation->getHostname(), $clientSystemInformation->getAllIPAddress(), $clientSystemInformation->getOperatingSystem(),
             $code, $exception, $message, $logMessage, $file, $line, $trace);
-    }
+    }    
     /**
      * Set loader message.
      * @return string|null
