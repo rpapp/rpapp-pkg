@@ -31,12 +31,13 @@ class DiagnosticLogs
      * @param string|null $message
      * @param string|null $logMessage
      * @param string|null $file
+     * @param string|null $functionName
      * @param string|null $line
      * @param string|null $trace
      */
     public function generate(string $projectCode = null, string $module = null, 
         string $fullname = null, string $username = null, string $role = null, string $position = null, string $department = null, string $hostname = null, string $ipAddress = null, string $os = null, 
-        string $code = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null, 
+        string $code = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $functionName = null, string $line = null, string $trace = null, 
         bool $upload = true)
     {
         $result = null;
@@ -136,6 +137,10 @@ class DiagnosticLogs
 
                     xmlwriter_start_element($xw, 'file');
                         xmlwriter_text($xw, $file);
+                    xmlwriter_end_element($xw);
+
+                    xmlwriter_start_element($xw, 'function-name');
+                        xmlwriter_text($xw, $functionName);
                     xmlwriter_end_element($xw);
 
                     xmlwriter_start_element($xw, 'line');
