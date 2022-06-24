@@ -55,14 +55,14 @@ class JsonResponse
     /**
      * Set error exception message.
      * @param $responseStatusCode
-     * @param string|null $message
-     * @param string|null $logMessage
-     * @param string|null $file
-     * @param string|null $line
-     * @param string|null $trace
+     * @param string $message
+     * @param string $logMessage
+     * @param string $file
+     * @param string $line
+     * @param string $trace
      * @return object
      **/
-    public function setErrorExceptionMessage($responseStatusCode = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
+    public function setErrorExceptionMessage($responseStatusCode, string $exception, string $message, string $logMessage, string $file, string $line, string $trace)
     {
         return response()->json([
             'code' => $responseStatusCode,
