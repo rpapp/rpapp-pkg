@@ -54,7 +54,7 @@ class JsonResponse
     }
     /**
      * Set error exception message.
-     * @param int $responseStatusCode
+     * @param $responseStatusCode
      * @param string|null $message
      * @param string|null $logMessage
      * @param string|null $file
@@ -62,7 +62,7 @@ class JsonResponse
      * @param string|null $trace
      * @return object
      **/
-    public function setErrorExceptionMessage(int $responseStatusCode = 0, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
+    public function setErrorExceptionMessage($responseStatusCode = null, string $exception = null, string $message = null, string $logMessage = null, string $file = null, string $line = null, string $trace = null)
     {
         return response()->json([
             'code' => $responseStatusCode,
@@ -75,6 +75,6 @@ class JsonResponse
                 'line' => $line,
                 'trace' => $trace
             ]
-        ], $responseStatusCode);
+        ], ResponseStatusCode::OK);
     }
 }
