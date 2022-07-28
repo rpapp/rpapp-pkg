@@ -5,6 +5,7 @@ namespace RPAPP;
 class Message
 {
 	const SUCCESSFULLY_LOGIN = 'You have successfully login';
+	const SUCCESFFULLY_LOGOUT = 'You have successfully logout';
 	const LOGIN_FAILED = 'Login failed';
 	const USER_NOT_FOUND = 'User not found';
 	const INVALID_CREDENTIALS = 'Invalid credentials';
