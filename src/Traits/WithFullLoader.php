@@ -4,7 +4,7 @@ namespace RPAPP\Traits;
 
 trait WithFullLoader
 {
-    protected ?string $fullLoaderMessage = null;
+    public ?string $fullLoaderMessage = null;
 
     public function setFullLoaderMessage(string $fullLoaderMessage)
     {
