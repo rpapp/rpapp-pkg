@@ -4,6 +4,10 @@ namespace RPAPP;
 
 class LogMessage
 {
+	// New
+	const USER_GENERATED = 'USER_GENERATED';
+	//
+
     const SUCCESSFULLY_LOGIN = 'SUCCESSFULLY_LOGIN';
 	const SUCCESSFULLY_LOGOUT = 'SUCCESSFULLY_LOGOUT';
 	const LOGIN_FAILED = 'LOGIN_FAILED';
